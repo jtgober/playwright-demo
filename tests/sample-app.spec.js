@@ -10,7 +10,7 @@ test.describe.parallel('suite', () => {
         await sampleAppPage.fillUsernameField(username)
         await sampleAppPage.fillPasswordField(password)
         await sampleAppPage.clickLoginOrLogoutButton()
-        await sampleAppPage.expectedLoginTextToBe(`Welcome, ${username}`)
+        await sampleAppPage.expectedLoginTextToBe(`Welcome, ${username}!`)
     });
 
     test('Wrong password test', async ({ page }) => {
@@ -37,7 +37,7 @@ test.describe.parallel('suite', () => {
         await sampleAppPage.fillUsernameField(username)
         await sampleAppPage.fillPasswordField(password)
         await sampleAppPage.clickLoginOrLogoutButton()
-        await sampleAppPage.expectedLoginTextToBe(`Welcome, ${username}`)
+        await sampleAppPage.expectedLoginTextToBe(`Welcome, ${username}!`)
         await sampleAppPage.clickLoginOrLogoutButton()
         await sampleAppPage.expectedLoginTextToBe("User logged out.")
     });
