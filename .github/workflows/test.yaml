@@ -1,0 +1,30 @@
+name: My Workflow
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+      - release
+      - qa
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      # Define default environment
+      name: production
+    steps:
+      - name: Check branch and set environment
+        if: github.ref == 'refs/heads/main'
+        run: echo "Setting environment to main" && echo "name: main" >> $GITHUB_ENV
+      - name: Check branch and set environment
+        if: github.ref == 'refs/heads/dev'
+        run: echo "Setting environment to dev" && echo "name: dev" >> $GITHUB_ENV
+      - name: Check branch and set environment
+        if: github.ref == 'refs/heads/release'
+        run: echo "Setting environment to release" && echo "name: release" >> $GITHUB_ENV
+      - name: Check branch and set environment
+        if: github.ref == 'refs/heads/qa'
+        run: echo "Setting environment to qa" && echo "name: qa" >> $GITHUB_ENV
+
