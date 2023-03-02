@@ -17,14 +17,14 @@ jobs:
     steps:
       - name: Check branch and set environment
         if: github.ref == 'refs/heads/main'
-        run: echo "Setting environment to main" && echo "name: main"
+        run: "echo 'Setting environment to main' && echo 'name: main'"
       - name: Check branch and set environment
         if: github.ref == 'refs/heads/dev'
-        run: echo "Setting environment to dev" && echo "name: dev"
+        run: "echo 'Setting environment to dev' && echo 'name: dev'"
       - name: Check branch and set environment
         if: github.ref == 'refs/heads/release'
-        run: echo "Setting environment to release" && echo "name: release"
+        run: "echo 'Setting environment to release' && echo 'name: release'"
       - name: Check branch and set environment
         if: github.ref == 'refs/heads/qa'
-        run: echo "Setting environment to qa" && echo "name: qa"
+        run: "echo 'Setting environment to qa' && echo 'name: qa'"
 
