@@ -1,7 +1,5 @@
 name: Playwright Tests
-on:
-  repository_dispatch:
-    types: [my-event-type]
+on: [repository_dispatch]
 jobs:
   test:
     timeout-minutes: 60
