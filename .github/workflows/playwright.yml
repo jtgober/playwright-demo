@@ -4,7 +4,7 @@ on: [push, pull_request]
 
 jobs:
   call-reusable-workflow:
-    uses: jtgober/reusable-flows/.github/workflows/reuse-bb.yml@main
+    uses: jtgober/reusable-flows/.github/workflows/reusable-flow.yml@main
     with:
       node-version: '16.x'
       npm-install-command: 'ci'
