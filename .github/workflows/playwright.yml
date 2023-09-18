@@ -7,6 +7,6 @@ jobs:
     uses: jtgober/reusable-flows/.github/workflows/reuse-bb.yml@main
     with:
       node-version: '16.x'
-      npm-build-command: 'install'
+      npm-install-command: 'ci'
       npm-test-command: 'npx playwright test'
       upload-artifact: false  # This will prevent the artifact from being uploaded
