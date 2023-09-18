@@ -8,5 +8,5 @@ jobs:
     with:
       node-version: '16.x'
       npm-build-command: 'install'
-      npm-test-command: 'npx playwright test --param=value'
+      npm-test-command: 'npx playwright test'
       upload-artifact: false  # This will prevent the artifact from being uploaded
